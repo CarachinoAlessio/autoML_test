@@ -1,0 +1,17 @@
+/caltech_test/autogloun_model/
+/.idea/
+/caltech_test/Caltech101/
+/caltech_test/D_autogluon.pdf
+/gender_detection_test/.ipynb_checkpoints/
+/gender_detection_test/AutogluonModels/
+/gender_detection_test/tmp/
+/gender_detection_test/A_autogloun.pdf
+/gender_detection_test/B_autosklearn.pdf
+/gender_detection_test/C_h2o.pdf
+/london_bike_sharing/.ipynb_checkpoints/
+/london_bike_sharing/autogloun_model/
+/london_bike_sharing/h20_model/
+/spotify/AutogluonModels/
+/spotify/E_autogloun.pdf
+/spotify/F_autosklearn.pdf
+/spotify/G_h2o.pdf

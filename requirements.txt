@@ -1,0 +1,6 @@
+scikit-learn
+numpy
+jupyter
+auto-sklearn #non disponibile per Windows
+autogluon
+shap
