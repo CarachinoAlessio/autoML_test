@@ -11,7 +11,7 @@ def parse_arguments():
     parser.add_argument("--task", type=str, default='classification', choices=['classification', 'regression'], help='', required=True)
     parser.add_argument("--problem_type", type=str, default='binary', choices=['binary', 'multiclass', 'quantile', 'regression'], help='')
 
-    parser.add_argument("--use_gpu", type=bool, default=False, help='da usare solo con autoogluon')
+    parser.add_argument("--num_gpus", type=int, default=0, help='da usare solo con autoogluon')
     parser.add_argument("--autogluon_preset", type=str, default='medium_quality', choices=['medium_quality', 'best_quality'], help='')
     parser.add_argument("--max_mem_size", type=int, default=None, help="Numero di GB")
 

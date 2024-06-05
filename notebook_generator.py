@@ -11,13 +11,13 @@ xai = args.xai
 max_train_time = args.max_train_time
 task = args.task
 problem_type = args.problem_type
-use_gpu = args.use_gpu
+num_gpus = args.num_gpus
 autogluon_preset = args.autogluon_preset
 max_mem_size = args.max_mem_size
 
 
 #assert dei parametri specificati
-if use_gpu:
+if num_gpus != 0:
     assert autoML == 'Autogluon'
 
 if max_mem_size is not None:
@@ -150,7 +150,7 @@ nb.cells.append(code_cell)
 
 markdown_cell = nbf.v4.new_markdown_cell("# Addestramento")
 if autoML == 'Autogluon':
-    code_cell = nbf.v4.new_code_cell(f"""predictor = predictor.fit(train_data, time_limit={max_train_time}, presets="{autogluon_preset}", ag_args_fit={{'num_gpus': {int(use_gpu)}}})""")
+    code_cell = nbf.v4.new_code_cell(f"""predictor = predictor.fit(train_data, time_limit={max_train_time}, presets="{autogluon_preset}", ag_args_fit={{'num_gpus': {num_gpus}}})""")
 elif autoML == 'H2O':
     code_cell = nbf.v4.new_code_cell(f"""aml.train(x=x, y=y, training_frame=train)""")
 else:
